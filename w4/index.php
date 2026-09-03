@@ -1,27 +1,12 @@
-<!DOCTYPE html>
+<?php
+header('Content-Type: application/json; charset=utf-8');
+$products = [
+    ['id' => 1, 'name' => 'Mouse', 'price' => 125000],
+    ['id' => 2, 'name' => 'Keyboard', 'price' => 275000]
+];
+echo json_encode([
+    'success' => true,
+    'data' => $products
+    ], JSON_PRETTY_PRINT);
 
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
-    <main>
-        <h1>Home</h1>
-    </main>
-    <footer>
-        <p>Copyright &copy; 2022</p>
-    </footer>
-</body>
-
-</html>
+?>
